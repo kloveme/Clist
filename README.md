@@ -31,7 +31,7 @@ int main () {
     Traverse your list. If 'cur = new_arry.next' is not equal to the start of the main list, it proves that the data has not been          fully traversed, so this loop condition is set because the list is a closed loop. The following structure proves it:
       
       d <- a <-> b <-> c <-> d -> a
-      So if ',next' = start 'a', it backtracks to the starting point, thereby ending the list traversal.
+      So if '.next' = start 'a', it backtracks to the starting point, thereby ending the list traversal.
     */
     while (cur != &new_arry) {
         struct data *p = container_of(cur, &data::list_head);
