@@ -28,11 +28,16 @@ int main () {
     
     struct list_arry *cur = new_arry.next;
     /** 
-    Traverse your list. If 'cur = new_arry.next' is not equal to the start of the main list, it proves that the data has not been          fully traversed, so this loop condition is set because the list is a closed loop. The following structure proves it:
+    Traverse your list. If 'cur = new_arry.next' is not equal to the start of the main list, it proves
+    that the data has not been
+    fully traversed, so this loop condition is set
+    because the list is a closed loop. The following structure proves it:
       
       d <- a <-> b <-> c <-> d -> a
 
-      In a doubly linked list, each node has two pointers, one pointing to the previous node and one pointing to the next node. The          next pointer of the last node points to the head node, forming a closed loop.
+      In a doubly linked list, each node has two pointers, one pointing to the previous
+        node and onepointing to the next node. The
+        next pointer of the last node points to the head node, forming a closed loop.
 
       So if '.next' = start 'a', it backtracks to the starting point, thereby ending the list traversal.
     */
