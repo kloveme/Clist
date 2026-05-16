@@ -5,14 +5,14 @@ Supports development on GNU/LINUX and Win32, mainly addressing array issues in C
 ## Salute
 This project mainly imitates the implementation scheme of C arrays in UNIX/LINUX systems. Thanks to the open source code of predecessors for learning 
 
-## Usage plan
+## Usage plan C/C++ General
 ``` c
 #include "list.h"
 #include <cstdio>
 #include <string>
 
 int main () {
-    list_arry new_arry = {&new_arry , &new_arry}; //Create an array structure
+    struct list_arry new_arry = {&new_arry , &new_arry}; //Create an array structure
 
     //Create your array content structure
     struct data { 
@@ -42,7 +42,11 @@ int main () {
       So if '.next' = start 'a', it backtracks to the starting point, thereby ending the list traversal.
     */
     while (cur != &new_arry) {
-        struct data *p = container_of(cur, &data::list_head);
+        struct data *p = container_of(cur, struct my_data, list_head);
+        /**
+            C: struct my_data *p = container_of(cur, struct my_data, list_head);
+            C++: struct data *p = container_of(cur, &data::list_head);
+        */
         printf("%s|%d\n" , p->name.c_str() , p->age);
         /** 
         Updating .next is the next linked list structure  
