@@ -12,7 +12,7 @@ This project mainly imitates the implementation scheme of C arrays in UNIX/LINUX
 #include <string>
 
 int main () {
-    struct list_arry new_arry = {&new_arry , &new_arry}; //Create an array structure
+    new_list_arry(new_arry); //Create an array structure
 
     //Create your array content structure
     struct data { 
