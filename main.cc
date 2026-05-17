@@ -1,4 +1,5 @@
 #include "include/list.h"
+#include "list.h"
 #include <cstdio>
 #include <string>
 
@@ -18,5 +19,6 @@ int main () {
         printf("%s|%d\n" , p->name.c_str() , p->age);
         cur = cur->next;
     }
+
     return 0;
 }

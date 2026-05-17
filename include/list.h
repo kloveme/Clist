@@ -1,7 +1,3 @@
-/**
-
-*/
-
 #ifndef KLOVE_EXTEND_LIST
 #define KLOVE_EXTEND_LIST
 
@@ -15,9 +11,12 @@ struct list_arry {
     struct list_arry *next , *prev;
 };
 extern void list_add_arry(struct list_arry *new_list_node , struct list_arry* main_head);
+extern void list_del_arry(struct list_arry *delet_node);
 #ifdef __cplusplus
     }
 #endif
+#define new_list_arry(_arry__) \
+    struct list_arry _arry__ = {&_arry__ , &_arry__}
 #ifdef __cplusplus
     template<typename T, typename M>
         inline T* container_of(M* ptr, M T::*member) {
